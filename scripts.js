@@ -133,3 +133,44 @@ let SecondNumberCheck = parseInt(CpfOfClient[0]) * 11 + parseInt(CpfOfClient[1])
 let SecondCalculation = SecondNumberCheck * 10 % 11
 
 SecondCalculation = SecondCalculation >= 10 ? SecondCalculation = 0 : SecondCalculation = SecondNumberCheck * 10 % 11
+
+if(FirstCalculation === CpfClient[9] && SecondCalculation === CpfClient[10]){
+  switch(parseInt(CpfClient[8])) {
+      case 0:
+          alert(`Seu cpf é ${CpfClient}, e foi emitido no estado: Rio Grande Do Sul`)
+          break;
+      case 1:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul ou Tocantins`)
+          break;
+      case 2:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Amazonas, Pará, Roraima, Amapá, Acre ou Rondônia`)
+          break;
+      case 3:
+          alert(`Seu cpf é ${CpfOfClient}, e pode ter sido emitido nos estados de: Ceará, Maranhão ou Piauí`)
+          break;
+      case 4:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Paraíba, Pernambuco, Alagoas ou Rio Grande do Norte`) 
+          break;
+      case 5:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Bahia ou Sergipe`)
+          break;
+      case 6:
+          alert(`Seu cpf é ${CpfClient}, e foi emitido no estado de: Minas Gerais`)
+          break;
+      case 7:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Rio de Janeiro ou Espírito Santo`) 
+          break;
+      case 8:
+          alert(`Seu cpf é ${CpfClient}, e foi emitido no estado de: São Paulo`)
+          break;
+      case 9:
+          alert(`Seu cpf é ${CpfClient}, e pode ter sido emitido nos estados de: Paraná ou Santa Catarina`)
+          break;
+    default:
+      alert(`[FATAL ERROR]`)
+      break;
+  }
+} 
+else {
+  alert(`Seu cpf é invalido`)
+}
